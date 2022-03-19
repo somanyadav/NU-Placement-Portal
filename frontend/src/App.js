@@ -6,6 +6,7 @@ import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import Login from "./components/Login";
 import "./App.css";
 import Dashboard from "./components/Dashboard";
+import Jdform from "./components/Jdform";
 // import PrivateRoute from "./PrivateRoute";
 // import ForgotPassword from "./ForgotPassword";
 // import UpdateProfile from "./UpdateProfile";
