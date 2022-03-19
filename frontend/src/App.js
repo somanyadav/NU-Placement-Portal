@@ -9,6 +9,7 @@ import Dashboard from "./components/Dashboard";
 // import PrivateRoute from "./PrivateRoute";
 // import ForgotPassword from "./ForgotPassword";
 // import UpdateProfile from "./UpdateProfile";
+// import BasicTabs from './Company';
 
 function App() {
   return (
