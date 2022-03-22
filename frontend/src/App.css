@@ -113,3 +113,10 @@ body {
 .nav-height {
   height: 4.95rem;
 }
+
+.navstyle {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
