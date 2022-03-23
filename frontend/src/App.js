@@ -17,8 +17,8 @@ function App() {
       <Router>
         <AuthProvider>
           <Switch>
-            {/* <Route exact path="/" component={Login} /> */}
-            <Route exact path="/" component={Jdform} />
+            {<Route exact path="/" component={Login} />}
+            {/* < Route exact path="/" component={Jdform} /> */ }
             {/* <PrivateRoute exact path="/" component={Dashboard} />
               <PrivateRoute path="/update-profile" component={UpdateProfile} /> */}
             <Route path="/signup" component={Signup} />

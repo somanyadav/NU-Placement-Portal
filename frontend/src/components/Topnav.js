@@ -27,10 +27,10 @@ function Topnav() {
                 </div>
               </div>
 
-              <div className="hidden md:flex items-center space-x-1">
+              <div className="hidden md:flex items-center space-x-1 pe-3">
                 <div className="relative w-12 h-12">
                   <img
-                    className="pr-1 rounded-full border border-gray-100 shadow-sm"
+                    className="rounded-full border border-gray-100 shadow-sm"
                     src="https://randomuser.me/api/portraits/women/81.jpg"
                     alt="user image"
                   />

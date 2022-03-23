@@ -5,14 +5,14 @@ function Jdform() {
   return (
     <>
       <Topnav />
-      <div className="container" style={{ marginTop: "5rem" }}>
+      <div className="container" style={{ marginTop: "5.5rem" }}>
         <form>
           <h2 className="text-center">
-            <b style={{ color: "#81181d" }}>Job Description Form</b>
+            <b style={{ color: "#81181d"}}>Job Description Form</b>
           </h2>
           <br />
           <div className="row jumbotron">
-            <div className="col-sm-6 form-group">
+            <div className="col-sm-6 form-group pe-5">
               <label for="name-f">
                 <b style={{ color: "#ee4423" }}>Name of Company</b>
               </label>
@@ -25,9 +25,9 @@ function Jdform() {
                 required
               />
             </div>
-            <div className="col-sm-6 form-group">
+            <div className="col-sm-6 form-group ps-5">
               <label for="name-l">
-                <b>Company URL</b>
+                <b style={{ color: "#ee4423" }}>Company URL</b>
               </label>
               <input
                 type="text"
@@ -38,9 +38,9 @@ function Jdform() {
                 required
               />
             </div>
-            <div className="col-sm-6 py-3 form-group">
+            <div className="col-sm-6 py-3 form-group pe-5">
               <label for="email">
-                <b>Description of Company and/or Division</b>
+                <b style={{ color: "#ee4423" }}>Description of Company and/or Division</b>
               </label>
               <textarea
                 className="form-control"
@@ -51,9 +51,9 @@ Anywhere – one of the leading RPA firms in the world today."
                 required
               ></textarea>
             </div>
-            <div className="col-sm-6 py-3 form-group">
+            <div className="col-sm-6 py-3 form-group ps-5">
               <label for="address-1">
-                <b>Work Mode</b>
+                <b style={{ color: "#ee4423" }}>Work Mode</b>
               </label>
               <textarea
                 className="form-control"
@@ -64,9 +64,9 @@ Anywhere – one of the leading RPA firms in the world today."
                 required
               ></textarea>
             </div>
-            <div className="col-sm-6 form-group">
+            <div className="col-sm-6 form-group pe-5">
               <label for="address-2">
-                <b>Do you give consent / right to use Co. Name & Logo</b>
+                <b style={{ color: "#ee4423" }}>Do you give consent / right to use Co. Name & Logo</b>
               </label>
               <div className="form-check">
                 <input
@@ -92,9 +92,9 @@ Anywhere – one of the leading RPA firms in the world today."
                 <label className="form-check-label" for="radio2"></label>
               </div>
             </div>
-            <div className="col-sm-4 form-group">
+            <div className="col-sm-4 form-group pe-5 ps-5">
               <label for="State">
-                <b>Internship Role / Job Title</b>
+                <b style={{ color: "#ee4423" }}>Internship Role / Job Title</b>
               </label>
               <input
                 type="address"
@@ -107,7 +107,7 @@ Anywhere – one of the leading RPA firms in the world today."
             </div>
             <div className="col-sm-2 form-group">
               <label for="zip">
-                <b>Job Location</b>
+                <b style={{ color: "#ee4423" }}>Job Location</b>
               </label>
               <input
                 type="zip"
@@ -118,9 +118,9 @@ Anywhere – one of the leading RPA firms in the world today."
                 required
               />
             </div>
-            <div className="col-sm-6 py-3 form-group">
+            <div className="col-sm-6 py-3 form-group pe-5">
               <label for="ctc">
-                <b>Stipend & CTC Offered (Post Internship)</b>
+                <b style={{ color: "#ee4423" }}>Stipend & CTC Offered (Post Internship)</b>
               </label>
               <textarea
                 className="form-control"
@@ -130,9 +130,9 @@ Anywhere – one of the leading RPA firms in the world today."
                 required
               ></textarea>
             </div>
-            <div className="col-sm-6 py-3 form-group">
+            <div className="col-sm-6 py-3 form-group ps-5">
               <label for="Date">
-                <b>Company Selection Date</b>
+                <b style={{ color: "#ee4423" }}>Company Selection Date</b>
               </label>
               <input
                 type="Date"
@@ -145,7 +145,7 @@ Anywhere – one of the leading RPA firms in the world today."
             </div>
             <div className="col-sm-12 form-group">
               <label for="selection">
-                <b>Selection Process / Mode of Selection</b>
+                <b style={{ color: "#ee4423" }}>Selection Process / Mode of Selection</b>
               </label>
               <textarea
                 className="form-control"
@@ -159,9 +159,9 @@ Anywhere – one of the leading RPA firms in the world today."
                 required
               ></textarea>
             </div>
-            <div className="col-sm-6 py-3 form-group">
+            <div className="col-sm-6 py-3 form-group pe-5">
               <label for="Edu">
-                <b>Educational Qualification</b>
+                <b style={{ color: "#ee4423" }}>Educational Qualification</b>
               </label>
               <select
                 id="Qualification"
@@ -175,9 +175,9 @@ Anywhere – one of the leading RPA firms in the world today."
                 <option value="imba">iMBA</option>
               </select>
             </div>
-            <div className="col-sm-4 py-3 form-group">
+            <div className="col-sm-4 py-3 form-group pe-5 ps-5">
               <label for="year">
-                <b>Year of Graduation</b>
+                <b style={{ color: "#ee4423" }}>Year of Graduation</b>
               </label>
               <input
                 type="number"
@@ -190,7 +190,7 @@ Anywhere – one of the leading RPA firms in the world today."
             </div>
             <div className="col-sm-2 py-3 form-group">
               <label for="zip">
-                <b>No. of Positions</b>
+                <b style={{ color: "#ee4423" }}>No. of Positions</b>
               </label>
               <input
                 type="number"
@@ -201,9 +201,9 @@ Anywhere – one of the leading RPA firms in the world today."
                 required
               />
             </div>
-            <div className="col-sm-6 form-group">
+            <div className="col-sm-6 form-group pe-5">
               <label for="JD">
-                <b>Job Descriptions</b>
+                <b style={{ color: "#ee4423" }}>Job Descriptions</b>
               </label>
               <textarea
                 className="form-control"
@@ -216,9 +216,9 @@ presentation skills
                 required
               ></textarea>
             </div>
-            <div className="col-sm-6 form-group">
+            <div className="col-sm-6 form-group ps-5">
               <label for="skills">
-                <b>Other Important Skills</b>
+                <b style={{ color: "#ee4423" }}>Other Important Skills</b>
               </label>
               <textarea
                 className="form-control"
@@ -226,14 +226,13 @@ presentation skills
                 rows="4"
                 placeholder="Self driven, motivated, excellent communication & interpersonal skills
 Independent player. Presentation skills for client facing trainings.
-Ability to build relationships.
 "
                 required
               ></textarea>
             </div>
             <div className="col-sm-12 py-3 form-group">
               <label for="bond">
-                <b>
+                <b style={{ color: "#ee4423" }}>
                   Service Bond / Agreement / Contract (Specify details If any)
                 </b>
               </label>
@@ -250,14 +249,14 @@ Ability to build relationships.
                 &nbsp;
               </label>
             </div>
-
-            <div className="col-sm-12 form-group mb-0">
+            <div className="form-group mb-0 d-flex justify-content-center pb-5">
+              
               <button
                 className="btn btn-primary float-right"
-                style={{ backgroundColor: "#ee4423", borderColor: "#ee4423" }}
-              >
+                style={{ backgroundColor: "#ee4423", borderColor: "#ee4423" }}>
                 Submit
               </button>
+        
             </div>
           </div>
         </form>
