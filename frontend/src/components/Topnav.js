@@ -1,4 +1,5 @@
 import React from "react";
+import {Helmet} from "react-helmet";
 
 function Topnav() {
   return (
@@ -21,11 +22,55 @@ function Topnav() {
                 </div>
 
                 <div className="hidden md:flex items-center space-x-1">
-                  <span className="pt-2 px-4 text-3xl text-orange-900">
-                    11th March 2022, Friday
-                  </span>
+                <div href="#" className="pt-3 ps-3 text-2xl text-orange-900 hover:text-orange-900" id="date" style={{fontFamily:'Raleway', }}>
+                </div>
+                <div href="#" className="pt-3 text-2xl text-orange-900 hover:text-orange-900" id="day" style={{fontFamily:'Raleway', }}>
+                </div>
                 </div>
               </div>
+
+
+              <Helmet>
+                <script>
+                var d = new Date();
+var date = d.getDate();
+var year = d.getFullYear();
+var month = d.getMonth();
+var monthArr = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December"
+];
+month = monthArr[month];
+document.getElementById("date").innerHTML = date + " " + month + " "+ year+ ", ";
+
+var myDate = new Date();
+var myDay = myDate.getDay();
+
+var weekday = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday"
+];
+day = weekday[myDay];
+document.getElementById("day").innerHTML = day;
+
+                </script>
+                
+              </Helmet>
 
               <div className="hidden md:flex items-center space-x-1 pe-3">
                 <div className="relative w-12 h-12">

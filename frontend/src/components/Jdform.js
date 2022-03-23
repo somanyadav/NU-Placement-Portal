@@ -13,8 +13,8 @@ function Jdform() {
           <br />
           <div className="row jumbotron">
             <div className="col-sm-6 form-group pe-5">
-              <label for="name-f">
-                <b style={{ color: "#ee4423" }}>Name of Company</b>
+              <label for="name-f" className="py-2">
+                <b style={{ color: "#ee4423" }} >Name of Company</b>
               </label>
               <input
                 type="text"
@@ -26,7 +26,7 @@ function Jdform() {
               />
             </div>
             <div className="col-sm-6 form-group ps-5">
-              <label for="name-l">
+              <label for="name-l" className="py-2">
                 <b style={{ color: "#ee4423" }}>Company URL</b>
               </label>
               <input
@@ -39,7 +39,7 @@ function Jdform() {
               />
             </div>
             <div className="col-sm-6 py-3 form-group pe-5">
-              <label for="email">
+              <label for="email" className="py-2">
                 <b style={{ color: "#ee4423" }}>Description of Company and/or Division</b>
               </label>
               <textarea
@@ -52,7 +52,7 @@ Anywhere – one of the leading RPA firms in the world today."
               ></textarea>
             </div>
             <div className="col-sm-6 py-3 form-group ps-5">
-              <label for="address-1">
+              <label for="address-1" className="py-2">
                 <b style={{ color: "#ee4423" }}>Work Mode</b>
               </label>
               <textarea
@@ -65,7 +65,7 @@ Anywhere – one of the leading RPA firms in the world today."
               ></textarea>
             </div>
             <div className="col-sm-6 form-group pe-5">
-              <label for="address-2">
+              <label for="address-2" className="py-2">
                 <b style={{ color: "#ee4423" }}>Do you give consent / right to use Co. Name & Logo</b>
               </label>
               <div className="form-check">
@@ -93,7 +93,7 @@ Anywhere – one of the leading RPA firms in the world today."
               </div>
             </div>
             <div className="col-sm-4 form-group pe-5 ps-5">
-              <label for="State">
+              <label for="State" className="py-2">
                 <b style={{ color: "#ee4423" }}>Internship Role / Job Title</b>
               </label>
               <input
@@ -106,7 +106,7 @@ Anywhere – one of the leading RPA firms in the world today."
               />
             </div>
             <div className="col-sm-2 form-group">
-              <label for="zip">
+              <label for="zip" className="py-2">
                 <b style={{ color: "#ee4423" }}>Job Location</b>
               </label>
               <input
@@ -119,7 +119,7 @@ Anywhere – one of the leading RPA firms in the world today."
               />
             </div>
             <div className="col-sm-6 py-3 form-group pe-5">
-              <label for="ctc">
+              <label for="ctc" className="py-2">
                 <b style={{ color: "#ee4423" }}>Stipend & CTC Offered (Post Internship)</b>
               </label>
               <textarea
@@ -131,7 +131,7 @@ Anywhere – one of the leading RPA firms in the world today."
               ></textarea>
             </div>
             <div className="col-sm-6 py-3 form-group ps-5">
-              <label for="Date">
+              <label for="Date" className="py-2">
                 <b style={{ color: "#ee4423" }}>Company Selection Date</b>
               </label>
               <input
@@ -144,7 +144,7 @@ Anywhere – one of the leading RPA firms in the world today."
               />
             </div>
             <div className="col-sm-12 form-group">
-              <label for="selection">
+              <label for="selection" className="py-2">
                 <b style={{ color: "#ee4423" }}>Selection Process / Mode of Selection</b>
               </label>
               <textarea
@@ -160,7 +160,7 @@ Anywhere – one of the leading RPA firms in the world today."
               ></textarea>
             </div>
             <div className="col-sm-6 py-3 form-group pe-5">
-              <label for="Edu">
+              <label for="Edu" className="py-2">
                 <b style={{ color: "#ee4423" }}>Educational Qualification</b>
               </label>
               <select
@@ -176,7 +176,7 @@ Anywhere – one of the leading RPA firms in the world today."
               </select>
             </div>
             <div className="col-sm-4 py-3 form-group pe-5 ps-5">
-              <label for="year">
+              <label for="year" className="py-2">
                 <b style={{ color: "#ee4423" }}>Year of Graduation</b>
               </label>
               <input
@@ -189,7 +189,7 @@ Anywhere – one of the leading RPA firms in the world today."
               />
             </div>
             <div className="col-sm-2 py-3 form-group">
-              <label for="zip">
+              <label for="zip" className="py-2">
                 <b style={{ color: "#ee4423" }}>No. of Positions</b>
               </label>
               <input
@@ -202,7 +202,7 @@ Anywhere – one of the leading RPA firms in the world today."
               />
             </div>
             <div className="col-sm-6 form-group pe-5">
-              <label for="JD">
+              <label for="JD" className="py-2">
                 <b style={{ color: "#ee4423" }}>Job Descriptions</b>
               </label>
               <textarea
@@ -217,7 +217,7 @@ presentation skills
               ></textarea>
             </div>
             <div className="col-sm-6 form-group ps-5">
-              <label for="skills">
+              <label for="skills" className="py-2">
                 <b style={{ color: "#ee4423" }}>Other Important Skills</b>
               </label>
               <textarea
@@ -231,7 +231,7 @@ Independent player. Presentation skills for client facing trainings.
               ></textarea>
             </div>
             <div className="col-sm-12 py-3 form-group">
-              <label for="bond">
+              <label for="bond" className="py-2">
                 <b style={{ color: "#ee4423" }}>
                   Service Bond / Agreement / Contract (Specify details If any)
                 </b>
