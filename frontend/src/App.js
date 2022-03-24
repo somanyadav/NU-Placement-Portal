@@ -10,6 +10,7 @@ import Jdform from "./components/Jdform";
 // import PrivateRoute from "./PrivateRoute";
 // import ForgotPassword from "./ForgotPassword";
 // import UpdateProfile from "./UpdateProfile";
+// import BasicTabs from './Company';
 
 function App() {
   return (
