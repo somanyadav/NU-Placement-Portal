@@ -1,11 +1,10 @@
 import React from "react";
 import Topnav from "./Topnav";
 
-function skeleton() {
-
-  return( 
+function Skeleton() {
+  return (
     <>
-      <Topnav/>;
+      <Topnav />;
       <div>
         <div className="main-app">
           <div className="sidebar">
@@ -60,4 +59,4 @@ function skeleton() {
   );
 }
 
-export default skeleton;
+export default Skeleton;

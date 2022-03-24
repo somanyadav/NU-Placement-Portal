@@ -1,0 +1,28 @@
+{
+  "name": "nu_placement_portal",
+  "version": "1.0.0",
+  "description": "1. <a href=\"https://github.com/somanyadav\">Soman Yadav</a> \r 2. <a href=\"https://github.com/princ1211\">Prince Jain</a> \r 3. <a href=\"https://github.com/mahakfaheem\">Mahak Faheem</a> \r 4. <a href=\"https://github.com/dikshadutt08\">Diksha Dutt</a> \r 5. <a href=\"https://github.com/SiddheshShinde-tech\">Siddhesh Shinde</a>",
+  "main": "index.js",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "mongoose": "^6.2.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SiddheshShinde-tech/NU-Placement-Portal.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SiddheshShinde-tech/NU-Placement-Portal/issues"
+  },
+  "homepage": "https://github.com/SiddheshShinde-tech/NU-Placement-Portal#readme"
+}

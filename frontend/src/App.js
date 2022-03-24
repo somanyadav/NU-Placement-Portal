@@ -7,6 +7,7 @@ import Login from "./components/Login";
 import "./App.css";
 import Dashboard from "./components/Dashboard";
 import Jdform from "./components/Jdform";
+import BasicTabs from "./components/Company";
 // import PrivateRoute from "./PrivateRoute";
 // import ForgotPassword from "./ForgotPassword";
 // import UpdateProfile from "./UpdateProfile";
@@ -18,13 +19,14 @@ function App() {
       <Router>
         <AuthProvider>
           <Switch>
-           {/* {<Route exact path="/" component={Login} />} */ }
-             < Route exact path="/" component={Jdform} /> 
+            <Route exact path="/" component={Login} />
+            <Route path="/form" component={Jdform} />
             {/* <PrivateRoute exact path="/" component={Dashboard} />
               <PrivateRoute path="/update-profile" component={UpdateProfile} /> */}
             <Route path="/signup" component={Signup} />
-            {/* <Route path="/form" component={Jdform} /> */}
+
             <Route path="/dashboard" component={Dashboard} />
+            <Route path="/invite" component={BasicTabs} />
           </Switch>
         </AuthProvider>
       </Router>
