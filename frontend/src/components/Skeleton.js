@@ -54,6 +54,7 @@ function Skeleton() {
                   <a href="https://princ1211jain.activehosted.com" className="menu-a" target="_blank">
                     <div className="menu-txt-hld">
                     <i class="fas fa-user menu-icon"></i>
+                    <i class="fas fa-mailbox menu-icon"></i>
                       <span className="menu-txt">AutoEmailers</span>
                     </div>
                   </a>
