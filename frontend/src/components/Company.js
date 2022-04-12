@@ -80,6 +80,7 @@ export default function BasicTabs() {
             width: "60%",
             mx: "auto",
             display: "grid",
+            border: '1px dashed grey',
           }}
         >
           <Box sx={{ borderBottom: 0, borderColor: "#36454F" }}>
@@ -109,7 +110,7 @@ export default function BasicTabs() {
           </Box>
           <TabPanel value={value} index={0}>
             <List
-              sx={{ width: "200%", maxWidth: 800, bgcolor: "background.paper" }}
+              sx={{ width: "100%", maxWidth: 800, bgcolor: "background.paper" }}
             >
               <ListItem alignItems="flex-start">
                 <ListItemAvatar>
