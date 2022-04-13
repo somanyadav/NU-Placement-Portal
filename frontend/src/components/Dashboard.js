@@ -32,7 +32,7 @@ import BarChart from "./BarChart";
         <>
         <Skeleton />
         <div className="container" style={{ marginTop: "5.5rem" }}>
-        <p class="lead d-none d-sm-block"><h1>CIC Dashboard</h1></p>
+        <p class="lead d-none d-sm-block"><h1 class="mt-3 mb-3 text-secondary">CIC Dashboard</h1></p>
  
         <div class="alert alert-warning fade collapse" role="alert" id="myAlert">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -93,31 +93,9 @@ import BarChart from "./BarChart";
         </div>
 
         <hr/>
-        {/* <div class="row placeholders mb-3">
-            <div class="col-6 col-sm-3 placeholder text-center">
-                <img src="//placehold.it/200/dddddd/fff?text=1" class="mx-auto img-fluid rounded-circle" alt="Generic placeholder thumbnail"/>
-                <h4>Responsive</h4>
-                <span class="text-muted">Device agnostic</span>
-            </div>
-            <div class="col-6 col-sm-3 placeholder text-center">
-                <img src="//placehold.it/200/e4e4e4/fff?text=2" class="mx-auto img-fluid rounded-circle" alt="Generic placeholder thumbnail"/>
-                <h4>Frontend</h4>
-                <span class="text-muted">UI / UX oriented</span>
-            </div>
-            <div class="col-6 col-sm-3 placeholder text-center">
-                <img src="//placehold.it/200/d6d6d6/fff?text=3" class="mx-auto img-fluid rounded-circle" alt="Generic placeholder thumbnail"/>
-                <h4>HTML5</h4>
-                <span class="text-muted">Standards-based</span>
-            </div>
-            <div class="col-6 col-sm-3 placeholder text-center">
-                <img src="//placehold.it/200/e0e0e0/fff?text=4" class="center-block img-fluid rounded-circle" alt="Generic placeholder thumbnail"/>
-                <h4>Framework</h4>
-                <span class="text-muted">CSS and JavaScript</span>
-            </div>
-        </div> */}
-        <h3 class="mt-3 mb-3 text-secondary" align="center">
+        <h2 class="mt-3 mb-3 text-secondary" align="center" >
                Analytics
-        </h3>
+        </h2>
         <div align="center">
             <div class="row" center>
             <table>
@@ -130,7 +108,6 @@ import BarChart from "./BarChart";
                     </td>
                 </tr>
             </table>
-                {/* <PieChart/> <BarChart/>  */}
              </div>       
         </div>
         </div>

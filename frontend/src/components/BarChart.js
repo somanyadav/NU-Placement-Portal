@@ -1,6 +1,6 @@
 import React from 'react';
 import { Chart as ChartJS, CategoryScale ,LinearScale,BarElement,Title,ArcElement, Tooltip, Legend } from 'chart.js';
-import { Pie, Bar } from 'react-chartjs-2';
+import { Bar } from 'react-chartjs-2';
 import faker from 'faker';
 // import { faker } from '@faker-js/faker';
 
@@ -73,7 +73,6 @@ export default function BarChart() {
 
   return (
   <div style={{height:"10rem",width:"40rem"}}>
-  {/* <Pie data={data} /> */}
   <Bar options={options} data={bardata} />
   </div>);
 }
