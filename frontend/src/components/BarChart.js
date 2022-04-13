@@ -69,11 +69,11 @@ export const bardata = {
 
 
 
-export default function PieChart() {
+export default function BarChart() {
 
   return (
-  <div style={{height:"10rem",width:"20rem"}} text-align>
-  <Pie data={data} />
-  {/* <Bar options={options} data={bardata} /> */}
+  <div style={{height:"10rem",width:"40rem"}}>
+  {/* <Pie data={data} /> */}
+  <Bar options={options} data={bardata} />
   </div>);
 }
