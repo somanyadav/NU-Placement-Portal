@@ -1,7 +1,12 @@
 import React from "react";
 import Topnav from "./Topnav";
+import { auth } from "../firebase";
 
 function Skeleton() {
+  function logOut() {
+    auth.signOut();
+  }
+
   return (
     <>
       <Topnav />;
@@ -11,7 +16,7 @@ function Skeleton() {
             <nav className="main-nav">
               <ul className="main-menu">
                 <li className="menu-item active">
-                  <a href="#" className="menu-a" target="_blank">
+                  <a href="#/" className="menu-a">
                     <div className="menu-txt-hld">
                       <i className="fas fa-home menu-icon"></i>
                       <span className="menu-txt">Home</span>
@@ -19,7 +24,7 @@ function Skeleton() {
                   </a>
                 </li>
                 <li className="menu-item">
-                  <a href="#" className="menu-a" target="_blank">
+                  <a href="#/invite" className="menu-a">
                     <div className="menu-txt-hld">
                       <i className="fas fa-user-check menu-icon"></i>
                       <span className="menu-txt">Recruiter</span>
@@ -51,11 +56,22 @@ function Skeleton() {
                   </a>
                 </li>
                 <li className="menu-item">
-                  <a href="https://princ1211jain.activehosted.com" className="menu-a" target="_blank">
+                  <a
+                    href="https://princ1211jain.activehosted.com"
+                    className="menu-a"
+                    target="_blank"
+                  >
                     <div className="menu-txt-hld">
-                    <i class="fas fa-user menu-icon"></i>
-                    <i class="fas fa-mailbox menu-icon"></i>
+                      <i class="fas fa-envelope menu-icon"></i>
                       <span className="menu-txt">AutoEmailers</span>
+                    </div>
+                  </a>
+                </li>
+                <li className="menu-item" onClick={logOut}>
+                  <a href="" className="menu-a" target="">
+                    <div className="menu-txt-hld">
+                      <i class="fas fa-sign-out menu-icon"></i>
+                      <span className="menu-txt">Log Out</span>
                     </div>
                   </a>
                 </li>
