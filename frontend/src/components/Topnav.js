@@ -1,7 +1,14 @@
 import React from "react";
-import {Helmet} from "react-helmet";
+import { Helmet } from "react-helmet";
+import date from "date-and-time";
 
 function Topnav() {
+  const now = new Date();
+  // console.log("now", now);
+  const newdate = date.format(now, "dddd, MMM DD YYYY");
+  // const newest = date.parse(newdate, "hh:mm:ss A");
+  // console.log("format", newdate);
+
   return (
     <>
       <div className="navstyle">
@@ -22,55 +29,22 @@ function Topnav() {
                 </div>
 
                 <div className="hidden md:flex items-center space-x-1">
-                <div href="#" className="pt-3 ps-3 text-2xl text-orange-900 hover:text-orange-900" id="date" style={{fontFamily:'Raleway', }}>
-                </div>
-                <div href="#" className="pt-3 text-2xl text-orange-900 hover:text-orange-900" id="day" style={{fontFamily:'Raleway', }}>
-                </div>
+                  <div
+                    href="#"
+                    className="pt-3 ps-3 text-2xl text-orange-900 hover:text-orange-900"
+                    id="date"
+                    style={{ fontFamily: "Raleway" }}
+                  ></div>
+                  <div
+                    href="#"
+                    className="pt-3 text-2xl text-orange-900 hover:text-orange-900"
+                    style={{ fontFamily: "Raleway" }}
+                  >
+                    {newdate}
+                  </div>
                 </div>
               </div>
-
-
-              <Helmet>
-                <script>
-                var d = new Date();
-var date = d.getDate();
-var year = d.getFullYear();
-var month = d.getMonth();
-var monthArr = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December"
-];
-month = monthArr[month];
-document.getElementById("date").innerHTML = date + " " + month + " "+ year+ ", ";
-
-var myDate = new Date();
-var myDay = myDate.getDay();
-
-var weekday = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday"
-];
-day = weekday[myDay];
-document.getElementById("day").innerHTML = day;
-
-                </script>
-                
-              </Helmet>
+              {/* date and time here */}
 
               <div className="hidden md:flex items-center space-x-1 pe-3">
                 <div className="relative w-12 h-12">

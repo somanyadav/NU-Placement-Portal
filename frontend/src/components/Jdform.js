@@ -89,9 +89,9 @@ function Jdform() {
   return (
     <>
       <Topnav />
-      <div className="container" style={{ marginTop: "5.5rem" }}>
+      <div className="container" style={{ marginTop: "7.5rem" }}>
         <form method="POST">
-          <h2 className="text-center">
+          <h2 style={{ marginTop: "4rem" }} className="text-center">
             <b style={{ color: "#81181d" }}>Job Description Form</b>
           </h2>
           <br />
@@ -175,7 +175,6 @@ function Jdform() {
                   name="consent"
                   value="yes"
                   onChange={handleInputs}
-                  required
                 />{" "}
                 Yes
                 <label className="form-check-label" for="radio1"></label>
