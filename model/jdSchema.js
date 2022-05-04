@@ -17,7 +17,7 @@ const jdSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  optradio: {
+  consent: {
     type: String,
     required: true,
   },

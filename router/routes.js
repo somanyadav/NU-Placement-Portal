@@ -33,7 +33,7 @@ router.post("/register", (req, res) => {
     compUrl,
     description,
     mode,
-    optradio,
+    consent,
     role,
     location,
     stipend,
@@ -52,7 +52,7 @@ router.post("/register", (req, res) => {
     !compUrl ||
     !description ||
     !mode ||
-    !optradio ||
+    !consent ||
     !role ||
     !location ||
     !stipend ||
@@ -87,7 +87,7 @@ router.post("/register", (req, res) => {
     compUrl,
     description,
     mode,
-    optradio,
+    consent,
     role,
     location,
     stipend,
@@ -106,7 +106,7 @@ router.post("/register", (req, res) => {
     .then(() => {
       res.status(201).json({ message: "User registered" });
     })
-    .catch((err) => res.status(500).json({ error: "Failed to registered" }));
+    .catch((err) => res.status(500).json({ error: err }));
 });
 
 module.exports = router;
