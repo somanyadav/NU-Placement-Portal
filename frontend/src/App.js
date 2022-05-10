@@ -8,6 +8,7 @@ import Dashboard from "./components/Dashboard";
 import Jdform from "./components/Jdform";
 import BasicTabs from "./components/Company";
 import PrivateRoute from "./components/PrivateRoute";
+import Calendar from "./components/Calendar";
 // import ForgotPassword from "./ForgotPassword";
 // import UpdateProfile from "./UpdateProfile";
 // import BasicTabs from './Company';
@@ -25,6 +26,8 @@ function App() {
             <PrivateRoute exact path="/" component={Dashboard} />
             <PrivateRoute path="/form" component={Jdform} />
             <PrivateRoute path="/invite" component={BasicTabs} />
+            <PrivateRoute path="/calendar" component={Calendar} />
+            
           </Switch>
         </AuthProvider>
       </Router>
