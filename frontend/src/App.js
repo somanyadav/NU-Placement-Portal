@@ -11,6 +11,7 @@ import PrivateRoute from "./components/PrivateRoute";
 import JobDetails from "./components/JobDetails";
 import Calender from "./components/Calendar";
 import Analytics from "./components/Analytics";
+import DemoPie from "./components/AntChart";
 // import ForgotPassword from "./ForgotPassword";
 // import UpdateProfile from "./UpdateProfile";
 // import BasicTabs from './Company';
@@ -31,6 +32,7 @@ function App() {
             <PrivateRoute path="/invite" component={BasicTabs} />
             <PrivateRoute path="/calendar" component={Calender} />
             <PrivateRoute path="/analytics" component={Analytics} />
+            {/* <PrivateRoute path="/antcharts" component={DemoPie} /> */}
           </Switch>
         </AuthProvider>
       </Router>
