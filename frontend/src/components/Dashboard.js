@@ -1,8 +1,15 @@
 import { useRef, useEffect, useState } from "react";
+import "antd/dist/antd.css";
 import { Link, useHistory } from "react-router-dom";
 import Skeleton from "./Skeleton";
 import PieChart from "./PieChart";
 import BarChart from "./BarChart";
+import { Card, Avatar } from "antd";
+import {
+  EditOutlined,
+  EllipsisOutlined,
+  SettingOutlined
+} from "@ant-design/icons";
 import "../App.css"
 
 //export default function Dashboard() {
@@ -10,6 +17,8 @@ import "../App.css"
 
 const Dashboard = () => {
   const [record, setRecord] = useState([]);
+
+  const { Meta } = Card;
 
   const getData = () => {
     fetch("https://jsonplaceholder.typicode.com/users")
@@ -72,7 +81,7 @@ const Dashboard = () => {
                   <i class="fa fa-user fa-2x"></i>
                 </div>
                 <br></br>
-                <h6 class="text-uppercase">Students Shortlisted</h6>
+                <h6 class="text-uppercase" style={{ color:"#81181d" }}>Students Shortlisted</h6>
                 <h1 class="display-6">134</h1>
               </div>
             </div>
@@ -184,7 +193,33 @@ const Dashboard = () => {
             </table>
           </div>
         </div>
+        <div>
+        <Card style={{ width: 300, marginTop: 16 }}>
+        <Meta
+          avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
+          title="Card title"
+          description="This is the description"
+        />
+      </Card>
+
+      <Card
+        style={{ width: 300, marginTop: 16 }}
+        actions={[
+          <SettingOutlined key="setting" />,
+          <EditOutlined key="edit" />,
+          <EllipsisOutlined key="ellipsis" />
+        ]}
+      >
+        <Meta
+          avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
+          title="Card title"
+          description="This is the description"
+        />
+      </Card>
       </div>
+      </div>
+
+      
     </>
   );
 };
