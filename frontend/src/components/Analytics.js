@@ -9,29 +9,26 @@ import { Row, Col } from 'antd';
 const Analytics = () => {
   const data = [
     {
-      type: '分类一',
+      type: 'Data Science',
       value: 27,
     },
     {
-      type: '分类二',
+      type: 'Cybersecurity',
       value: 25,
     },
     {
-      type: '分类三',
+      type: 'Big Data',
       value: 18,
     },
     {
-      type: '分类四',
+      type: 'Artificial Intelligence',
       value: 15,
     },
     {
-      type: '分类五',
+      type: 'General',
       value: 10,
     },
-    {
-      type: '其他',
-      value: 5,
-    },
+ 
   ];
   const config = {
     appendPadding: 10,
@@ -63,26 +60,55 @@ const Analytics = () => {
       title: false,
       content: {
         style: {
+          fontSize: 16,
           whiteSpace: 'pre-wrap',
           overflow: 'hidden',
           textOverflow: 'ellipsis',
         },
-        content: 'AntV\nG2Plot',
+        content: 'IP Offered\nAs Per\nSpecialization\n',
       },
     },
   };
   const configbub = {
-    percent: 0.25,
+    percent: 0.5,
     outline: {
       border: 4,
       distance: 8,
     },
     wave: {
-      length: 128,
+      length: 150,
     },
+    
   };
   const configspeed = {
-    percent: 0.75,
+    percent: 0.5,
+    range: {
+      ticks: [0, 1 / 3, 2 / 3, 1],
+      color: ['#F4664A', '#FAAD14', '#30BF78'],
+    },
+    indicator: {
+      pointer: {
+        style: {
+          stroke: '#D0D0D0',
+        },
+      },
+      pin: {
+        style: {
+          stroke: '#D0D0D0',
+        },
+      },
+    },
+    statistic: {
+      content: {
+        style: {
+          fontSize: '36px',
+          lineHeight: '36px',
+        },
+      },
+    },
+  };
+  const configspeed1 = {
+    percent: 0.25,
     range: {
       ticks: [0, 1 / 3, 2 / 3, 1],
       color: ['#F4664A', '#FAAD14', '#30BF78'],
@@ -121,7 +147,9 @@ const Analytics = () => {
   <Liquid {...configbub} />
   </Col>
   <Col xs={{ span: 11, offset: 1 }} lg={{ span: 6, offset: 2 }}>
-  <Gauge {...configspeed} />
+  <Gauge {...configspeed} /> </Col>
+  <Col xs={{ span: 11, offset: 1 }} lg={{ span: 6, offset: 2 }}>
+  <Gauge {...configspeed1} />
   </Col>
   </Row>
   </>
