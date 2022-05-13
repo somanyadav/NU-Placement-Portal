@@ -10,6 +10,7 @@ import BasicTabs from "./components/Company";
 import PrivateRoute from "./components/PrivateRoute";
 import JobDetails from "./components/JobDetails";
 import Calender from "./components/Calendar";
+import Analytics from "./components/Analytics";
 // import ForgotPassword from "./ForgotPassword";
 // import UpdateProfile from "./UpdateProfile";
 // import BasicTabs from './Company';
@@ -29,8 +30,7 @@ function App() {
             <PrivateRoute path="/form" component={Jdform} />
             <PrivateRoute path="/invite" component={BasicTabs} />
             <PrivateRoute path="/calendar" component={Calender} />
-           
-            
+            <PrivateRoute path="/analytics" component={Analytics} />
           </Switch>
         </AuthProvider>
       </Router>

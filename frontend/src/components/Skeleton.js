@@ -32,7 +32,7 @@ function Skeleton() {
                   </a>
                 </li>
                 <li className="menu-item">
-                  <a href="#" className="menu-a" target="_blank">
+                  <a href="#/calendar" className="menu-a">
                     <div className="menu-txt-hld">
                       <i className="fas fa-calendar menu-icon"></i>
                       <span className="menu-txt">Calendar</span>
@@ -40,21 +40,21 @@ function Skeleton() {
                   </a>
                 </li>
                 <li className="menu-item">
-                  <a href="#" className="menu-a" target="_blank">
+                  <a href="#/analytics" className="menu-a">
                     <div className="menu-txt-hld">
                       <i className="fas fa-chart-bar menu-icon"></i>
                       <span className="menu-txt">Analytics</span>
                     </div>
                   </a>
                 </li>
-                <li className="menu-item">
+                {/* <li className="menu-item">
                   <a href="#" className="menu-a" target="_blank">
                     <div className="menu-txt-hld">
                       <i className="fas fa-users menu-icon"></i>
                       <span className="menu-txt">Students</span>
                     </div>
                   </a>
-                </li>
+                </li> */}
                 <li className="menu-item">
                   <a
                     href="https://princ1211jain.activehosted.com"
