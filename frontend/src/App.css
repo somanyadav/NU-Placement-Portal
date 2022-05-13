@@ -124,7 +124,9 @@ body {
   width: 100%;
 }
 
-.card-style{
-  height: 10rem;
-  border-color: blue;
+a{
+  color: #81181d;
+}
+link{
+  color: #81181D;
 }

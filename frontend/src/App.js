@@ -20,6 +20,7 @@ import Analytics from "./components/Analytics";
 function App() {
   return (
     <>
+     <link style={{ color: "red" }}></link>
       <Router>
         <AuthProvider>
           <Switch>
