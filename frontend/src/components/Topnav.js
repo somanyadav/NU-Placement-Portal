@@ -10,7 +10,7 @@ function Topnav() {
 
   return (
     <>
-      <div className="navstyle">
+      <div className="navstyle z-10">
         <nav className="bg-gray-100 fixed inset-x-0 mt-0 z-10 shadow-md">
           <div className="max-w-8xl mx-auto px-0">
             <div className="flex justify-between">
