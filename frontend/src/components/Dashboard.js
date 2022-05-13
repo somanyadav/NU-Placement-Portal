@@ -2,9 +2,10 @@ import { useRef, useEffect, useState } from "react";
 import "antd/dist/antd.css";
 import { Link, useHistory } from "react-router-dom";
 import Skeleton from "./Skeleton";
-import PieChart from "./PieChart";
-import BarChart from "./BarChart";
+// import PieChart from "./PieChart";
+// import BarChart from "./BarChart";
 import { Card, Avatar } from "antd";
+import { Row, Col } from "antd";
 import {
   EditOutlined,
   EllipsisOutlined,
@@ -65,8 +66,8 @@ const Dashboard = () => {
                   <i class="fa fa-list fa-2x"></i>
                 </div>
                 <br></br>
-                <h6 class="text">JDs PUBLISHED</h6>
-                <h1 class="display-6">134</h1>
+                <h6 class="text" style={{ color:"#81181d" }}>JDs PUBLISHED</h6>
+                <h1 class="display-6" style={{ color:"#81181d" }}>94</h1>
               </div>
             </div>
           </div>
@@ -82,7 +83,7 @@ const Dashboard = () => {
                 </div>
                 <br></br>
                 <h6 class="text-uppercase" style={{ color:"#81181d" }}>Students Shortlisted</h6>
-                <h1 class="display-6">134</h1>
+                <h1 class="display-6" style={{ color:"#81181d" }}>134</h1>
               </div>
             </div>
           </div>
@@ -97,8 +98,8 @@ const Dashboard = () => {
                   <i class="fa fa-pen fa-2x"></i>
                 </div>
                 <br></br>
-                <h6 class="text">IP OFFERED </h6>
-                <h1 class="display-6">134</h1>
+                <h6 class="text" style={{ color:"#81181d" }}>IP OFFERED </h6>
+                <h1 class="display-6" style={{ color:"#81181d" }}>114</h1>
               </div>
             </div>
           </div>
@@ -113,8 +114,8 @@ const Dashboard = () => {
                   <i class="fa fa-share fa-2x"></i>
                 </div>
                 <br></br>
-                <h6 class="text-uppercase">PPO Offered</h6>
-                <h1 class="display-6">134</h1>
+                <h6 class="text-uppercase" style={{ color:"#81181d" }}>PPO Offered</h6>
+                <h1 class="display-6" style={{ color:"#81181d" }}>66</h1>
               </div>
             </div>
           </div>
@@ -176,10 +177,10 @@ const Dashboard = () => {
         </div>
 
         <hr />
-        <h2 class="mt-3 mb-3 text-secondary" align="center">
-          Analytics
+        <h2 class="mt-3 mb-3 text-secondary" align="left">
+          Top recruiters
         </h2>
-        <div align="center">
+        {/* <div align="center">
           <div class="row" center>
             <table>
               <tr>
@@ -192,17 +193,70 @@ const Dashboard = () => {
               </tr>
             </table>
           </div>
-        </div>
+        </div> */}
         <div>
-        <Card style={{ width: 300, marginTop: 16 }}>
+        <div>
+        <marquee>
+        <Row>
+          <Col xs={{ span: 5, offset: 1 }} lg={{ span: 4, offset: 1 }}>
+            <Card style={{ width: 300, zIndex: "0" }}>
+              <Meta
+                avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
+                title="Card title"
+                description="This is the description"
+              />
+            </Card>
+          </Col>
+          <Col xs={{ span: 11, offset: 1 }} lg={{ span: 4, offset: 1 }}>
+            <Card style={{ width: 300, zIndex: "0" }}>
+              <Meta
+                avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
+                title="Card title"
+                description="This is the description"
+              />
+            </Card>
+          </Col>
+          <Col xs={{ span: 5, offset: 1 }} lg={{ span: 4, offset: 1 }}>
+            <Card style={{ width: 300, zIndex: "0" }}>
+              <Meta
+                avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
+                title="Card title"
+                description="This is the description"
+              />
+            </Card>
+          </Col>
+          
+          <Col xs={{ span: 5, offset: 1 }} lg={{ span: 4, offset: 1 }}>
+            <Card style={{ width: 300, zIndex: "0" }}>
+              <Meta
+                avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
+                title="Card title"
+                description="This is the description"
+              />
+            </Card>
+          </Col>
+
+          
+        </Row></marquee>
+
+        {/* <Card style={{ width: 300, marginTop: 16 }}>
         <Meta
           avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
-          title="Card title"
-          description="This is the description"
+          title="IBM"
+          description="54 placed"
         />
       </Card>
+      <Card style={{ width: 300, marginTop: 16 }}>
+        <Meta
+          avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
+          title="IBM"
+          description="54 placed"
+        />
+      </Card> */}
+        </div>
+        
 
-      <Card
+      {/* <Card
         style={{ width: 300, marginTop: 16 }}
         actions={[
           <SettingOutlined key="setting" />,
@@ -215,7 +269,7 @@ const Dashboard = () => {
           title="Card title"
           description="This is the description"
         />
-      </Card>
+      </Card> */}
       </div>
       </div>
 

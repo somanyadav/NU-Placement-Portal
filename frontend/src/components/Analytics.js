@@ -111,19 +111,19 @@ const Analytics = () => {
 
   
   return(<> <Skeleton/>
-  <Row>
-    <Col xs={{ span: 5, offset: 1 }} lg={{ span: 6, offset: 2 }}>
+  {/* <Row> */}
+    {/* <Col xs={{ span: 5, offset: 1 }} lg={{ span: 6, offset: 2 }}> */}
   <Pie {...config} style={{padding:70,
   display:"flex",
   width:"50%"}}/>
-  </Col>
-  <Col xs={{ span: 11, offset: 1 }} lg={{ span: 6, offset: 2 }}>
+  {/* </Col> */}
+  {/* <Col xs={{ span: 11, offset: 1 }} lg={{ span: 6, offset: 2 }}> */}
   <Liquid {...configbub} />
-  </Col>
-  <Col xs={{ span: 11, offset: 1 }} lg={{ span: 6, offset: 2 }}>
+  {/* </Col> */}
+  {/* <Col xs={{ span: 11, offset: 1 }} lg={{ span: 6, offset: 2 }}> */}
   <Gauge {...configspeed} />
-  </Col>
-  </Row>
+  {/* </Col> */}
+  {/* </Row> */}
   </>
   );
 };
