@@ -12,7 +12,7 @@ function Skeleton() {
       <Topnav />;
       <div>
         <div className="main-app">
-          <div className="sidebar">
+          <div className="sidebar" >
             <nav className="main-nav">
               <ul className="main-menu">
                 <li className="menu-item active">
