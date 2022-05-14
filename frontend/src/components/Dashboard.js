@@ -6,6 +6,7 @@ import Skeleton from "./Skeleton";
 // import BarChart from "./BarChart";
 import { Card, Avatar } from "antd";
 import { Row, Col } from "antd";
+import { Progress } from 'antd';
 import {
   EditOutlined,
   EllipsisOutlined,
@@ -36,7 +37,7 @@ const Dashboard = () => {
       <Skeleton />
       <div className="container" style={{ marginTop: "5.5rem" }}>
         <p class="lead d-none d-sm-block">
-          <h1 class="mt-3 mb-3 text-secondary">CIC Dashboard</h1>
+          <h1 class="mt-3 mb-3 text">CIC Dashboard</h1>
         </p>
 
         <div
@@ -66,8 +67,8 @@ const Dashboard = () => {
                   <i class="fa fa-list fa-2x"></i>
                 </div>
                 <br></br>
-                <h6 class="text" style={{ color:"#81181d" }}>JDs PUBLISHED</h6>
-                <h1 class="display-6" style={{ color:"#81181d" }}>94</h1>
+                <h6 class="text" style={{ color:"#81181d" }}><b>JDs PUBLISHED</b></h6>
+                <h1 class="display-6" style={{ color:"#81181d" }}><b>94</b></h1>
               </div>
             </div>
           </div>
@@ -82,8 +83,8 @@ const Dashboard = () => {
                   <i class="fa fa-user fa-2x"></i>
                 </div>
                 <br></br>
-                <h6 class="text-uppercase" style={{ color:"#81181d" }}>Students Shortlisted</h6>
-                <h1 class="display-6" style={{ color:"#81181d" }}>134</h1>
+                <h6 class="text-uppercase" style={{ color:"#81181d" }}><b>Students Selected</b></h6>
+                <h1 class="display-6" style={{ color:"#81181d" }}><b>134</b></h1>
               </div>
             </div>
           </div>
@@ -98,8 +99,8 @@ const Dashboard = () => {
                   <i class="fa fa-pen fa-2x"></i>
                 </div>
                 <br></br>
-                <h6 class="text" style={{ color:"#81181d" }}>IP OFFERED </h6>
-                <h1 class="display-6" style={{ color:"#81181d" }}>114</h1>
+                <h6 class="text" style={{ color:"#81181d" }}><b>IP OFFERED</b> </h6>
+                <h1 class="display-6" style={{ color:"#81181d" }}><b>114</b></h1>
               </div>
             </div>
           </div>
@@ -114,11 +115,16 @@ const Dashboard = () => {
                   <i class="fa fa-share fa-2x"></i>
                 </div>
                 <br></br>
-                <h6 class="text-uppercase" style={{ color:"#81181d" }}>PPO Offered</h6>
-                <h1 class="display-6" style={{ color:"#81181d" }}>66</h1>
+                <h6 class="text-uppercase" style={{ color:"#81181d" }}><b>PPO Offered</b></h6>
+                <h1 class="display-6" style={{ color:"#81181d" }}><b>66</b></h1>
               </div>
             </div>
+            <br />
           </div>
+          
+          <br />
+          <br />
+          <hr />
 
           {/* <div class="row mb-3">
           <div class="col-xl-3 col-sm-6 py-2">
@@ -175,11 +181,36 @@ const Dashboard = () => {
             </div>
           </div> */}
         </div>
+        <Row align="center">
+          <Col xs={{ span: 5, offset: 1 }} lg={{ span: 5, offset: 3 }}>
+          <h4>Average Package</h4>
+          <Progress type="circle" percent={32} format={percent => ` 5.5 LPA`} />
+          </Col>
+
+          <Col xs={{ span: 5, offset: 1 }} lg={{ span: 5, offset: 3 }}>
+          <h4>Highest Package</h4>
+          <Progress type="circle" percent={90} format={percent => ` 22 LPA`} />
+          </Col>
+
+          <Col xs={{ span: 5, offset: 1 }} lg={{ span: 5, offset: 3 }}>
+          <h4>Students Placed</h4>
+          <Progress type="circle" percent={100} format={() => '60'} />
+          </Col>
+        </Row>
+
+        {/* <Progress type="dashboard" percent={75} />
+        <h4>Average Package</h4>
+        <Progress type="circle" percent={32} format={percent => ` 5.5 LPA`} />
+        <h4>Highest Package</h4>
+        <Progress type="circle" percent={50} format={percent => ` 22 LPA`} />
+        {/* <Progress type="dashboard" percent={75} gapDegree={30} /> */}
+        {/* <h4>Students Placed</h4>
+         <Progress type="circle" percent={100} format={() => '60'} /> */}
 
         <hr />
-        <h2 class="mt-3 mb-3 text-secondary" align="left">
+        <h3 class="mt-3 mb-3 text" align="center" >
           Top recruiters
-        </h2>
+        </h3>
         {/* <div align="center">
           <div class="row" center>
             <table>

@@ -10,19 +10,19 @@ const Analytics = () => {
   const data = [
     {
       type: 'Data Science',
-      value: 27,
+      value: 45,
     },
     {
       type: 'Cybersecurity',
-      value: 25,
+      value: 46,
     },
     {
       type: 'Artificial Intellligence',
-      value: 18,
+      value: 51,
     },
     {
       type: 'Big Data',
-      value: 15,
+      value: 9,
     },
     {
       type: 'General',
