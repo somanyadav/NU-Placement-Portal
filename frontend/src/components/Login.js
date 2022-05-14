@@ -31,7 +31,7 @@ export default function Login() {
           // Signed in
           const user = userCredential.user;
           if (user) {
-            history.push("/dashboard");
+            history.push("/");
           } else {
             setError("User doesn't exist");
           }
@@ -59,20 +59,37 @@ export default function Login() {
             <Card>
               <Card.Body>
                 <center>
-              <img src="https://images.shiksha.com/mediadata/images/1571910870phpnRxM70.jpg"
-                    alt="user image " style={{ height: "70px"}}
+                  <img
+                    src="https://images.shiksha.com/mediadata/images/1571910870phpnRxM70.jpg"
+                    alt="user image "
+                    style={{ height: "70px" }}
                   />
-                  </center>
-                <h2 className="text-center mb-4 pt-3" style={{ fontFamily: 'Dosis'}}>Log In</h2>
+                </center>
+                <h2
+                  className="text-center mb-4 pt-3"
+                  style={{ fontFamily: "Dosis" }}
+                >
+                  Log In
+                </h2>
                 {error && <Alert variant="danger">{error}</Alert>}
                 <Form onSubmit={handleSubmit}>
                   <Form.Group id="email">
                     <Form.Label>Email</Form.Label>
-                    <Form.Control type="email" placeholder="Type Your Email"  ref={emailRef} required />
+                    <Form.Control
+                      type="email"
+                      placeholder="Type Your Email"
+                      ref={emailRef}
+                      required
+                    />
                   </Form.Group>
                   <Form.Group id="password">
                     <Form.Label className="pt-2">Password</Form.Label>
-                    <Form.Control type="password" placeholder="Type Your Password" ref={passwordRef} required />
+                    <Form.Control
+                      type="password"
+                      placeholder="Type Your Password"
+                      ref={passwordRef}
+                      required
+                    />
                   </Form.Group>
                   <Button
                     disabled={loading}
