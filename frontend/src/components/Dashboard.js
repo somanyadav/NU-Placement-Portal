@@ -119,7 +119,12 @@ const Dashboard = () => {
                 <h1 class="display-6" style={{ color:"#81181d" }}>66</h1>
               </div>
             </div>
+            <br />
           </div>
+          
+          <br />
+          <br />
+          <hr />
 
           {/* <div class="row mb-3">
           <div class="col-xl-3 col-sm-6 py-2">
@@ -177,17 +182,17 @@ const Dashboard = () => {
           </div> */}
         </div>
         <Row align="center">
-          <Col xs={{ span: 5, offset: 1 }} lg={{ span: 4, offset: 3 }}>
+          <Col xs={{ span: 5, offset: 1 }} lg={{ span: 5, offset: 3 }}>
           <h4>Average Package</h4>
           <Progress type="circle" percent={32} format={percent => ` 5.5 LPA`} />
           </Col>
 
-          <Col xs={{ span: 5, offset: 1 }} lg={{ span: 4, offset: 3 }}>
+          <Col xs={{ span: 5, offset: 1 }} lg={{ span: 5, offset: 3 }}>
           <h4>Highest Package</h4>
           <Progress type="circle" percent={90} format={percent => ` 22 LPA`} />
           </Col>
 
-          <Col xs={{ span: 5, offset: 1 }} lg={{ span: 4, offset: 3 }}>
+          <Col xs={{ span: 5, offset: 1 }} lg={{ span: 5, offset: 3 }}>
           <h4>Students Placed</h4>
           <Progress type="circle" percent={100} format={() => '60'} />
           </Col>
