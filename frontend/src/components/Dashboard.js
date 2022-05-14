@@ -6,6 +6,7 @@ import Skeleton from "./Skeleton";
 // import BarChart from "./BarChart";
 import { Card, Avatar } from "antd";
 import { Row, Col } from "antd";
+import { Progress } from 'antd';
 import {
   EditOutlined,
   EllipsisOutlined,
@@ -175,11 +176,36 @@ const Dashboard = () => {
             </div>
           </div> */}
         </div>
+        <Row align="center">
+          <Col xs={{ span: 5, offset: 1 }} lg={{ span: 4, offset: 3 }}>
+          <h4>Average Package</h4>
+          <Progress type="circle" percent={32} format={percent => ` 5.5 LPA`} />
+          </Col>
+
+          <Col xs={{ span: 5, offset: 1 }} lg={{ span: 4, offset: 3 }}>
+          <h4>Highest Package</h4>
+          <Progress type="circle" percent={90} format={percent => ` 22 LPA`} />
+          </Col>
+
+          <Col xs={{ span: 5, offset: 1 }} lg={{ span: 4, offset: 3 }}>
+          <h4>Students Placed</h4>
+          <Progress type="circle" percent={100} format={() => '60'} />
+          </Col>
+        </Row>
+
+        {/* <Progress type="dashboard" percent={75} />
+        <h4>Average Package</h4>
+        <Progress type="circle" percent={32} format={percent => ` 5.5 LPA`} />
+        <h4>Highest Package</h4>
+        <Progress type="circle" percent={50} format={percent => ` 22 LPA`} />
+        {/* <Progress type="dashboard" percent={75} gapDegree={30} /> */}
+        {/* <h4>Students Placed</h4>
+         <Progress type="circle" percent={100} format={() => '60'} /> */}
 
         <hr />
-        <h2 class="mt-3 mb-3 text-secondary" align="left">
+        <h3 class="mt-3 mb-3 text-secondary" align="center" >
           Top recruiters
-        </h2>
+        </h3>
         {/* <div align="center">
           <div class="row" center>
             <table>
