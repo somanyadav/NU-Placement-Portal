@@ -12,7 +12,7 @@ function Skeleton() {
       <Topnav />;
       <div>
         <div className="main-app">
-          <div className="sidebar">
+          <div className="sidebar" style={{ zIndex: "100" }}>
             <nav className="main-nav">
               <ul className="main-menu">
                 <li className="menu-item active">

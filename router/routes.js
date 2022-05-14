@@ -109,4 +109,13 @@ router.post("/register", (req, res) => {
     .catch((err) => res.status(500).json({ error: err }));
 });
 
+// FETCHING DOCUMENTS HERE
+router.get("/browsejd", (req, res) => {
+  jdUser.find().then((records) => {
+    if (records) {
+      res.send(records);
+    }
+  });
+});
+
 module.exports = router;
