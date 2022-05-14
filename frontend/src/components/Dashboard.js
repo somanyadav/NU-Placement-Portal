@@ -67,8 +67,8 @@ const Dashboard = () => {
                   <i class="fa fa-list fa-2x"></i>
                 </div>
                 <br></br>
-                <h6 class="text" style={{ color:"#81181d" }}>JDs PUBLISHED</h6>
-                <h1 class="display-6" style={{ color:"#81181d" }}>94</h1>
+                <h6 class="text" style={{ color:"#81181d" }}><b>JDs PUBLISHED</b></h6>
+                <h1 class="display-6" style={{ color:"#81181d" }}><b>94</b></h1>
               </div>
             </div>
           </div>
@@ -83,8 +83,8 @@ const Dashboard = () => {
                   <i class="fa fa-user fa-2x"></i>
                 </div>
                 <br></br>
-                <h6 class="text-uppercase" style={{ color:"#81181d" }}>Students Shortlisted</h6>
-                <h1 class="display-6" style={{ color:"#81181d" }}>134</h1>
+                <h6 class="text-uppercase" style={{ color:"#81181d" }}><b>Students Selected</b></h6>
+                <h1 class="display-6" style={{ color:"#81181d" }}><b>134</b></h1>
               </div>
             </div>
           </div>
@@ -99,8 +99,8 @@ const Dashboard = () => {
                   <i class="fa fa-pen fa-2x"></i>
                 </div>
                 <br></br>
-                <h6 class="text" style={{ color:"#81181d" }}>IP OFFERED </h6>
-                <h1 class="display-6" style={{ color:"#81181d" }}>114</h1>
+                <h6 class="text" style={{ color:"#81181d" }}><b>IP OFFERED</b> </h6>
+                <h1 class="display-6" style={{ color:"#81181d" }}><b>114</b></h1>
               </div>
             </div>
           </div>
@@ -115,8 +115,8 @@ const Dashboard = () => {
                   <i class="fa fa-share fa-2x"></i>
                 </div>
                 <br></br>
-                <h6 class="text-uppercase" style={{ color:"#81181d" }}>PPO Offered</h6>
-                <h1 class="display-6" style={{ color:"#81181d" }}>66</h1>
+                <h6 class="text-uppercase" style={{ color:"#81181d" }}><b>PPO Offered</b></h6>
+                <h1 class="display-6" style={{ color:"#81181d" }}><b>66</b></h1>
               </div>
             </div>
             <br />
