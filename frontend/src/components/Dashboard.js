@@ -37,7 +37,7 @@ const Dashboard = () => {
       <Skeleton />
       <div className="container" style={{ marginTop: "5.5rem" }}>
         <p class="lead d-none d-sm-block">
-          <h1 class="mt-3 mb-3 text-secondary">CIC Dashboard</h1>
+          <h1 class="mt-3 mb-3 text">CIC Dashboard</h1>
         </p>
 
         <div
@@ -208,7 +208,7 @@ const Dashboard = () => {
          <Progress type="circle" percent={100} format={() => '60'} /> */}
 
         <hr />
-        <h3 class="mt-3 mb-3 text-secondary" align="center" >
+        <h3 class="mt-3 mb-3 text" align="center" >
           Top recruiters
         </h3>
         {/* <div align="center">
