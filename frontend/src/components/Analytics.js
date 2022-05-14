@@ -69,15 +69,18 @@ const Analytics = () => {
     },
   };
   const configbub = {
-    percent: 0.50,
+    percent: 0.35,
+    color: '#6194f9',
     outline: {
       border: 4,
       distance: 8,
     },
     wave: {
-      length: 150,
+      length: 128,
     },
+    
   };
+  
   const configspeed = {
     percent: 0.5,
     range: {
