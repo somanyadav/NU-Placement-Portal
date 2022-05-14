@@ -3,8 +3,9 @@ import Skeleton from "./Skeleton";
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { Pie } from '@ant-design/plots';
-import { Liquid , Gauge } from '@ant-design/plots';
+import { Liquid ,Column } from '@ant-design/plots';
 import { Row, Col } from 'antd';
+import { Bullet } from '@ant-design/plots';
 
 const Analytics = () => {
   const data = [
@@ -125,51 +126,170 @@ const Analytics = () => {
         style: {
           stroke: '#D0D0D0',
         },
+      }
+    }
+  }
     
+  const paletteSemanticRed = '#F4664A';
+  const brandColor = '#5B8FF9';
+  const configcol = {
+    data,
+    xField: 'type',
+    yField: 'value',
+    seriesField: '',
+    color: ({ type }) => {
+      if (type === '10-30分' || type === '30+分') {
+        return paletteSemanticRed;
+      }
+
+      return brandColor;
+    },
+    label: {
+      content: (originData) => {
+        const val = parseFloat(originData.value);
+
+        if (val < 0.05) {
+          return (val * 100).toFixed(1) + '%';
+        }
+      },
+      offset: 10,
+    },
+    legend: false,
+    xAxis: {
+      label: {
+        autoHide: true,
+        autoRotate: false,
       },
     },
-    statistic: {
-      content: {
+  };
+  const datapro = [
+    {
+      title: '满意度',
+      ranges: [40, 70, 100],
+      measures: [30, 50],
+      target: 85,
+    },
+  ];
+  const configpro = {
+    datapro,
+    measureField: 'measures',
+    rangeField: 'ranges',
+    targetField: 'target',
+    xField: 'title',
+    color: {
+      range: ['#FFbcb8', '#FFe0b0', '#bfeec8'],
+      measure: ['#5B8FF9', '#61DDAA'],
+      target: '#39a3f4',
+    },
+    label: {
+      measure: {
+        position: 'middle',
         style: {
-          fontSize: '36px',
-          lineHeight: '36px',
+          fill: '#fff',
         },
       },
+    },
+    xAxis: {
+      line: null,
+    },
+    yAxis: false,
+    tooltip: {
+      showMarkers: false,
+      shared: true,
+    },
+    // 自定义 legend
+    legend: {
+      custom: true,
+      position: 'bottom',
+      items: [
+        {
+          value: '差',
+          name: '差',
+          marker: {
+            symbol: 'square',
+            style: {
+              fill: '#FFbcb8',
+              r: 5,
+            },
+          },
+        },
+        {
+          value: '良',
+          name: '良',
+          marker: {
+            symbol: 'square',
+            style: {
+              fill: '#FFe0b0',
+              r: 5,
+            },
+          },
+        },
+        {
+          value: '优',
+          name: '优',
+          marker: {
+            symbol: 'square',
+            style: {
+              fill: '#bfeec8',
+              r: 5,
+            },
+          },
+        },
+        {
+          value: '第一季度',
+          name: '第一季度',
+          marker: {
+            symbol: 'square',
+            style: {
+              fill: '#5B8FF9',
+              r: 5,
+            },
+          },
+        },
+        {
+          value: '第二季度',
+          name: '第二季度',
+          marker: {
+            symbol: 'square',
+            style: {
+              fill: ' #61DDAA',
+              r: 5,
+            },
+          },
+        },
+        {
+          value: '目标值',
+          name: '目标值',
+          marker: {
+            symbol: 'line',
+            style: {
+              stroke: '#39a3f4',
+              r: 5,
+            },
+          },
+        },
+      ],
     },
   };
 
   
   return(<> <Skeleton/>
-  {/* <Row> */}
-    {/* <Col xs={{ span: 5, offset: 1 }} lg={{ span: 6, offset: 2 }}> */}
-  <Pie {...config} style={{padding:70,
+  <h1>Analytics And Reporting</h1>
+  <center>
+  <h1>Analytics And Reporting</h1>
+  <Pie {...config} style={{padding:100,
   display:"flex",
   width:"50%"}}/>
-  {/* </Col> */}
-  {/* <Col xs={{ span: 11, offset: 1 }} lg={{ span: 6, offset: 2 }}> */}
+  <h3>Placement Rate </h3>
   <Liquid {...configbub} />
-  {/* </Col> */}
-  {/* <Col xs={{ span: 11, offset: 1 }} lg={{ span: 6, offset: 2 }}> */}
-  <Gauge {...configspeed} />
-  {/* </Col> */}
-  {/* </Row> */}
-  {/* </Col> */}
-  {/* <Col xs={{ span: 11, offset: 1 }} lg={{ span: 6, offset: 2 }}> */}
-  <Gauge {...configspeed1} />
-  {/* </Col> */}
-  {/* </Row> */}
+  <h3>Average Package  </h3>
+  <Column {...configcol} style={{padding:100,
+  display:"flex",
+  width:"50%"}}/>
+  {/* <Bullet {...configpro} /> */}
+  </center>
   </>
   );
 };
 
-// ReactDOM.render(<DemoPie />, document.getElementById('container'));
 export default Analytics
-
-// export default function Analytics() {
-//   return (
-//     <>
-//       <Skeleton />
-//       <div>Analytics Page here</div>
-//     </>
-//   );
-// }
