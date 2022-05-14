@@ -1,4 +1,5 @@
-// import "./styles.css";
+import { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { red } from "@mui/material/colors";
 import * as React from "react";
@@ -63,11 +64,29 @@ function a11yProps(index) {
 }
 
 export default function BasicTabs() {
+  let history = useHistory();
+
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
+  const [jdDocs, setJdDocs] = useState([]);
+
+  useEffect(() => {
+    fetch("/browsejd")
+      .then((response) => response.json())
+      .then((data) => setJdDocs(data));
+  }, []);
+
+  console.log("JDDocs value", jdDocs);
+
+  const routeChange = (compName) => {
+    history.push({ pathname: "/details", state: { data: compName } });
+    console.log("Button Clicked", compName);
+  };
+
   return (
     <>
       <Skeleton />
@@ -80,7 +99,7 @@ export default function BasicTabs() {
             width: "60%",
             mx: "auto",
             display: "grid",
-            border: '1px dashed grey',
+            border: "1px solid lightgrey",
           }}
         >
           <Box sx={{ borderBottom: 0, borderColor: "#36454F" }}>
@@ -110,7 +129,11 @@ export default function BasicTabs() {
           </Box>
           <TabPanel value={value} index={0}>
             <List
-              sx={{ width: "100%", maxWidth: 800, bgcolor: "background.paper" }}
+              sx={{
+                width: "100%",
+                maxWidth: 1000,
+                bgcolor: "background.paper",
+              }}
             >
               <ListItem alignItems="flex-start">
                 <ListItemAvatar>
@@ -216,8 +239,10 @@ export default function BasicTabs() {
                   </Button>
                 </strong>
               </ListItem>
+              <Divider variant="inset" component="li" />
             </List>
           </TabPanel>
+
           <TabPanel value={value} index={1}>
             <List
               sx={{
@@ -226,170 +251,75 @@ export default function BasicTabs() {
                 bgcolor: "background.paper",
               }}
             >
-              <ListItem alignItems="flex-start">
-                <ListItemAvatar>
-                  <Avatar alt="Cisco" src="/static/images/logos/cisco.png" />
-                </ListItemAvatar>
-                <ListItemText
-                  primary="Cisco"
-                  secondary={
-                    <React.Fragment>
-                      <li>Stream , Role </li>
-                      <li>Deadline : </li>
-                      <li>Package : </li>
-                    </React.Fragment>
-                  }
-                />
-                <strong>
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    size="small"
-                    style={{ marginLeft: 10 }}
-                  >
-                    View JD
-                  </Button>
-                </strong>
+              {jdDocs.map((doc, index) => (
+                <>
+                  <ListItem key={index} alignItems="flex-start">
+                    <ListItemAvatar>
+                      <Avatar
+                        alt={doc.compName}
+                        src="/static/images/logos/cisco.png"
+                      />
+                    </ListItemAvatar>
+                    <ListItemText
+                      primary={doc.compName}
+                      secondary={
+                        <React.Fragment>
+                          <li>Role : {doc.role}</li>
+                          <li>Deadline : {doc.date}</li>
+                          <li>Positions : {doc.positions}</li>
+                        </React.Fragment>
+                      }
+                    />
+                    <strong>
+                      <Button
+                        variant="contained"
+                        color="primary"
+                        size="small"
+                        style={{ marginLeft: 10 }}
+                        onClick={() => routeChange(doc.compName)}
+                      >
+                        View
+                      </Button>
+                    </strong>
 
-                <Divider variant="inset" component="li" />
-              </ListItem>
-              <Divider variant="inset" component="li" />
-              <ListItem alignItems="flex-start">
-                <ListItemAvatar>
-                  <Avatar alt="IBM" src="/static/images/logos/IBM.png" />
-                </ListItemAvatar>
-                <ListItemText
-                  primary="IBM"
-                  secondary={
-                    <React.Fragment>
-                      <li>Stream , Role </li>
-                      <li>Deadline : </li>
-                      <li>Package : </li>
-                    </React.Fragment>
-                  }
-                />
-                <strong>
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    size="small"
-                    style={{ marginLeft: 10 }}
-                  >
-                    View JD
-                  </Button>
-                </strong>
-                <Divider variant="inset" component="li" />
-              </ListItem>
-              <Divider variant="inset" component="li" />
-              <ListItem alignItems="flex-start">
-                <ListItemAvatar>
-                  <Avatar alt="Amazon" src="/static/images/logos/amazon.png" />
-                </ListItemAvatar>
-                <ListItemText
-                  primary="Amazon"
-                  secondary={
-                    <React.Fragment>
-                      <li>Stream , Role </li>
-                      <li> </li>
-                      <li>Deadline : </li>
-                      <li>Package : </li>
-                    </React.Fragment>
-                  }
-                />
-                <strong>
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    size="small"
-                    style={{ marginLeft: 10 }}
-                  >
-                    View JD
-                  </Button>
-                </strong>
-                <Divider variant="inset" component="li" />
-              </ListItem>
-              <Divider variant="inset" component="li" />
+                    <Divider variant="inset" component="li" />
+                  </ListItem>
+                  <Divider variant="inset" component="li" />
+                </>
+              ))}
             </List>
           </TabPanel>
 
           <TabPanel value={value} index={2}>
             <List
-              sx={{ width: "100%", maxWidth: 800, bgcolor: "background.paper" }}
+              sx={{
+                width: "100%",
+                maxWidth: 1000,
+                bgcolor: "background.paper",
+              }}
             >
-              <List>
-                <ListItem>
-                  <ListItemIcon>
-                    <Avatar alt="IBM" src="/static/images/logos/IBM.png" />
-                  </ListItemIcon>
-                  Company Name
+              {jdDocs.map((doc, index) => (
+                <>
+                  <ListItem key={index}>
+                    <ListItemIcon>
+                      <Avatar alt="IBM" src="/static/images/logos/IBM.png" />
+                    </ListItemIcon>
+
+                    <ListItemText primary={doc.compName} />
+                    <strong>
+                      <Button
+                        variant="contained"
+                        color="primary"
+                        size="small"
+                        style={{ marginLeft: 10 }}
+                      >
+                        Publish
+                      </Button>
+                    </strong>
+                  </ListItem>
                   <Divider variant="inset" component="li" />
-                  <strong>
-                    <Button
-                      variant="contained"
-                      color="primary"
-                      size="small"
-                      style={{ marginLeft: 350 }}
-                    >
-                      Publish
-                    </Button>
-                  </strong>
-                </ListItem>
-                <Divider variant="inset" component="li" />
-                <ListItem>
-                  <ListItemIcon>
-                    <Avatar alt="IBM" src="/static/images/logos/IBM.png" />
-                  </ListItemIcon>
-                  Company Name
-                  <Divider variant="inset" component="li" />
-                  <strong>
-                    <Button
-                      variant="contained"
-                      color="primary"
-                      size="small"
-                      style={{ marginLeft: 350 }}
-                    >
-                      Publish
-                    </Button>
-                  </strong>
-                </ListItem>
-                <Divider variant="inset" component="li" />
-                <ListItem>
-                  <ListItemIcon>
-                    <Avatar alt="IBM" src="/static/images/logos/IBM.png" />
-                  </ListItemIcon>
-                  Company Name
-                  <Divider variant="inset" component="li" />
-                  <strong>
-                    <Button
-                      variant="contained"
-                      color="primary"
-                      size="small"
-                      style={{ marginLeft: 350 }}
-                    >
-                      Publish
-                    </Button>
-                  </strong>
-                </ListItem>
-                <Divider variant="inset" component="li" />
-                <ListItem>
-                  <ListItemIcon>
-                    <Avatar alt="IBM" src="/static/images/logos/IBM.png" />
-                  </ListItemIcon>
-                  Company Name
-                  <Divider variant="inset" component="li" />
-                  <strong>
-                    <Button
-                      variant="contained"
-                      color="primary"
-                      size="small"
-                      style={{ marginLeft: 350 }}
-                    >
-                      Publish
-                    </Button>
-                  </strong>
-                </ListItem>
-                <Divider variant="inset" component="li" />
-              </List>
+                </>
+              ))}
             </List>
           </TabPanel>
         </Box>
@@ -397,4 +327,3 @@ export default function BasicTabs() {
     </>
   );
 }
-//export default App;
