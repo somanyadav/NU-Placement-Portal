@@ -202,8 +202,8 @@ const Dashboard = () => {
             <Card style={{ width: 300, zIndex: "0" }}>
               <Meta
                 avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
-                title="Card title"
-                description="This is the description"
+                title="IBM"
+                description="Avg. Package 5LPA"
               />
             </Card>
           </Col>
@@ -211,8 +211,8 @@ const Dashboard = () => {
             <Card style={{ width: 300, zIndex: "0" }}>
               <Meta
                 avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
-                title="Card title"
-                description="This is the description"
+                title="EY"
+                description="Avg. Package 5.2LPA"
               />
             </Card>
           </Col>
@@ -220,8 +220,8 @@ const Dashboard = () => {
             <Card style={{ width: 300, zIndex: "0" }}>
               <Meta
                 avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
-                title="Card title"
-                description="This is the description"
+                title="Big Basket"
+                description="Avg. Package 8LPA"
               />
             </Card>
           </Col>
@@ -230,8 +230,48 @@ const Dashboard = () => {
             <Card style={{ width: 300, zIndex: "0" }}>
               <Meta
                 avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
-                title="Card title"
-                description="This is the description"
+                title="Thoucentric"
+                description="Avg. Package 6.5LPA"
+              />
+            </Card>
+          </Col>
+
+          <Col xs={{ span: 5, offset: 1 }} lg={{ span: 4, offset: 1 }}>
+            <Card style={{ width: 300, zIndex: "0" }}>
+              <Meta
+                avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
+                title="Genpact"
+                description="Avg. Package 8.2LPA"
+              />
+            </Card>
+          </Col>
+
+          <Col xs={{ span: 5, offset: 1 }} lg={{ span: 4, offset: 1 }}>
+            <Card style={{ width: 300, zIndex: "0" }}>
+              <Meta
+                avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
+                title="Morgan Stanley"
+                description="Avg. Package 22LPA"
+              />
+            </Card>
+          </Col>
+
+          <Col xs={{ span: 5, offset: 1 }} lg={{ span: 4, offset: 1 }}>
+            <Card style={{ width: 300, zIndex: "0" }}>
+              <Meta
+                avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
+                title="Airtel"
+                description="Avg. Package 7.6LPA"
+              />
+            </Card>
+          </Col>
+
+          <Col xs={{ span: 5, offset: 1 }} lg={{ span: 4, offset: 1 }}>
+            <Card style={{ width: 300, zIndex: "0" }}>
+              <Meta
+                avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
+                title="PwC"
+                description="Avg. Package 5.6LPA"
               />
             </Card>
           </Col>
