@@ -11,7 +11,10 @@ function Topnav() {
   return (
     <>
       <div className="navstyle">
-        <nav className="bg-gray-100 fixed inset-x-0 mt-0 z-10 shadow-md">
+        <nav
+          className="bg-gray-100 fixed inset-x-0 mt-0 z-10 shadow-md"
+          style={{ zIndex: "100" }}
+        >
           <div className="max-w-8xl mx-auto px-0">
             <div className="flex justify-between">
               <div className="flex">
