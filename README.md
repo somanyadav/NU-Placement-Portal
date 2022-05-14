@@ -48,7 +48,10 @@ Students and Companies can use this portal for maintaining communication with CI
 MERN - MongoDB, ExpressJs, ReactJs, NodeJs
 
 ## Acknowledgement
-We are grateful to Mr. Bipin Sinha and Ms. Geetika Rastogi for their constructive feedback and supportive mentoring during this project. We thank them for being so supportive and available to us. We are also very much thankful to our panelists, Prof. Debashish Sengupta, Prof. Eswaran Narasimhan, and our course instructor Prof. Manish Hurkat for their feedback, support, and guidance throughout our capstone project.
+We are grateful to Mr. Bipin Sinha and Ms. Geetika Rastogi for their constructive feedback and supportive mentoring during this project.
+
+We thank them for being so supportive and available to us.
+We are also very much thankful to our panelists, Prof. Debashish Sengupta, Prof. Eswaran Narasimhan, and our course instructor Prof. Manish Hurkat for their feedback, support, and guidance throughout our capstone project.
 
 ## Team Members
 1. <a href="https://github.com/somanyadav">Soman Yadav</a> 
